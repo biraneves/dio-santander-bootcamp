@@ -1,17 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Fundamentos - Flex Shrink</title>
     <style>
 
+        .container {
+            display: flex;
+            border: solid 1px black;
+            max-width: 350px;
+        }
 
+        .item {
+            margin: 5px;
+            background: orangered;
+            font-size: 24px;
+            margin: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .s-0 {
+            flex-shrink: 0;
+        }
+
+        .s-1 {
+            flex-shrink: 1;
+        }
+
+        .s-2 {
+            flex-shrink: 2;
+        }
+
+        .s-3 {
+            flex-shrink: 3;
+        }
+
+        .fb-100 {
+            flex-basis: 100px;
+        }
+
+        .fb-200 {
+            flex-basis: 200px;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
 
     </style>
 </head>
 <body>
-    
+    <h2>flex-shrink: 1</h2>
+    <div class="container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">B</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">E</div>
+    </div>
+
+    <h2>flex-shrink: 1</h2>
+    <div class="container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">The generated lorem ipsum.</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+    </div>
+
+    <h2>flex-shrink: 0 - flex-basis: 100px</h2>
+    <div class="container">
+        <div class="item s-0 fg-1 fb-200">A</div>
+        <div class="item s-0 fg-1 fb-200">The generated</div>
+        <div class="item s-0 fg-1 fb-200">C</div>
+        <div class="item s-0 fg-1 fb-200">D</div>
+    </div>
+
+    <h2>flex-shrink: mix - flex-basis: 100px</h2>
+    <div class="container">
+        <div class="item s-1 fg-1 fb-100">A</div>
+        <div class="item s-2 fg-1 fb-100">The generated</div>
+        <div class="item s-2 fg-1 fb-100">C</div>
+        <div class="item s-3 fg-1 fb-100">D</div>
+    </div>
 </body>
 </html>
