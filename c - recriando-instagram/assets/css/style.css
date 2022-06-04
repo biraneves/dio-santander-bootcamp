@@ -117,7 +117,8 @@ body {
 .app-download {
     height: 3rem;
     width: 10rem;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .app-download:nth-child(1) {
@@ -156,5 +157,9 @@ body {
     .group {
         margin: 10px 0;
         border: solid 1px transparent
+    }
+
+    .app-download {
+        margin: 0.3rem;
     }
 }
