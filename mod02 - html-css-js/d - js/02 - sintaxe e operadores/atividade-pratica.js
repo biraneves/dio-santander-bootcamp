@@ -5,10 +5,10 @@ function compara(a, b) {
         return false;
     }
 
-    firstNumber = parseInt(a);
-    secondNumber = parseInt(b);
+    const firstNumber = parseInt(a);
+    const secondNumber = parseInt(b);
     
-    soma = firstNumber + secondNumber;
+    const soma = firstNumber + secondNumber;
 
     console.log("Os números " + firstNumber + " e " + secondNumber + (firstNumber === secondNumber ? " são" : " não são") +
         " iguais. Sua soma é " + soma + ", que é " + (soma > 10 ? "maior que" : "menor ou igual a") +
